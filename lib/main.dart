@@ -95,14 +95,15 @@ class MyApp extends ConsumerWidget {
                   },
                   child: const Text('change person',
                       style: TextStyle(fontSize: 30))),
-              const SizedBox(height: 30),
+              const SizedBox(height: 10),
               ElevatedButton(
                   onPressed: () {
-                    copyTicsToPerson(ref);
+                    copyCountToPerson(ref);
                   },
-                  child:
-                      const Text('copy tics', style: TextStyle(fontSize: 30))),
+                  child: const Text('copy count to person',
+                      style: TextStyle(fontSize: 30))),
               //const JsonWidget(),
+              const SizedBox(height: 30),
               const TestWidget2()
             ],
           ),

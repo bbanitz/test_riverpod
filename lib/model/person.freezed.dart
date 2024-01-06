@@ -26,7 +26,7 @@ mixin _$Person {
   String? get postalCode => throw _privateConstructorUsedError;
   String? get city => throw _privateConstructorUsedError;
   String? get state => throw _privateConstructorUsedError;
-  int get tics => throw _privateConstructorUsedError;
+  int get count => throw _privateConstructorUsedError;
   List<String> get liste => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -46,7 +46,7 @@ abstract class $PersonCopyWith<$Res> {
       String? postalCode,
       String? city,
       String? state,
-      int tics,
+      int count,
       List<String> liste});
 }
 
@@ -69,7 +69,7 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
     Object? postalCode = freezed,
     Object? city = freezed,
     Object? state = freezed,
-    Object? tics = null,
+    Object? count = null,
     Object? liste = null,
   }) {
     return _then(_value.copyWith(
@@ -97,9 +97,9 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
           ? _value.state
           : state // ignore: cast_nullable_to_non_nullable
               as String?,
-      tics: null == tics
-          ? _value.tics
-          : tics // ignore: cast_nullable_to_non_nullable
+      count: null == count
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
               as int,
       liste: null == liste
           ? _value.liste
@@ -123,7 +123,7 @@ abstract class _$$PersonImplCopyWith<$Res> implements $PersonCopyWith<$Res> {
       String? postalCode,
       String? city,
       String? state,
-      int tics,
+      int count,
       List<String> liste});
 }
 
@@ -144,7 +144,7 @@ class __$$PersonImplCopyWithImpl<$Res>
     Object? postalCode = freezed,
     Object? city = freezed,
     Object? state = freezed,
-    Object? tics = null,
+    Object? count = null,
     Object? liste = null,
   }) {
     return _then(_$PersonImpl(
@@ -172,9 +172,9 @@ class __$$PersonImplCopyWithImpl<$Res>
           ? _value.state
           : state // ignore: cast_nullable_to_non_nullable
               as String?,
-      tics: null == tics
-          ? _value.tics
-          : tics // ignore: cast_nullable_to_non_nullable
+      count: null == count
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
               as int,
       liste: null == liste
           ? _value._liste
@@ -195,7 +195,7 @@ class _$PersonImpl implements _Person {
       this.postalCode,
       this.city,
       this.state,
-      required this.tics,
+      required this.count,
       required final List<String> liste})
       : _liste = liste;
 
@@ -215,7 +215,7 @@ class _$PersonImpl implements _Person {
   @override
   final String? state;
   @override
-  final int tics;
+  final int count;
   final List<String> _liste;
   @override
   List<String> get liste {
@@ -226,7 +226,7 @@ class _$PersonImpl implements _Person {
 
   @override
   String toString() {
-    return 'Person(id: $id, name: $name, adress: $adress, postalCode: $postalCode, city: $city, state: $state, tics: $tics, liste: $liste)';
+    return 'Person(id: $id, name: $name, adress: $adress, postalCode: $postalCode, city: $city, state: $state, count: $count, liste: $liste)';
   }
 
   @override
@@ -241,14 +241,14 @@ class _$PersonImpl implements _Person {
                 other.postalCode == postalCode) &&
             (identical(other.city, city) || other.city == city) &&
             (identical(other.state, state) || other.state == state) &&
-            (identical(other.tics, tics) || other.tics == tics) &&
+            (identical(other.count, count) || other.count == count) &&
             const DeepCollectionEquality().equals(other._liste, _liste));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, name, adress, postalCode,
-      city, state, tics, const DeepCollectionEquality().hash(_liste));
+      city, state, count, const DeepCollectionEquality().hash(_liste));
 
   @JsonKey(ignore: true)
   @override
@@ -272,7 +272,7 @@ abstract class _Person implements Person {
       final String? postalCode,
       final String? city,
       final String? state,
-      required final int tics,
+      required final int count,
       required final List<String> liste}) = _$PersonImpl;
 
   factory _Person.fromJson(Map<String, dynamic> json) = _$PersonImpl.fromJson;
@@ -290,7 +290,7 @@ abstract class _Person implements Person {
   @override
   String? get state;
   @override
-  int get tics;
+  int get count;
   @override
   List<String> get liste;
   @override

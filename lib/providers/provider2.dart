@@ -21,7 +21,7 @@ Person person = Person(
     liste: ['c++', 'java', 'dart'],
     postalCode: '67800',
     city: 'Bischheim',
-    tics: 0);
+    count: 0);
 
 @riverpod
 Person onePerson(OnePersonRef ref) {
@@ -30,7 +30,6 @@ Person onePerson(OnePersonRef ref) {
 
 @riverpod
 changePerson(ChangePersonRef ref) {
-  print('change person');
   if (first) {
     person = Person(
         id: 1,
@@ -40,7 +39,7 @@ changePerson(ChangePersonRef ref) {
         postalCode: '67450',
         city: 'Drusenheim',
         state: 'France',
-        tics: 0);
+        count: 0);
   } else {
     person = Person(
         id: 1,
@@ -50,18 +49,14 @@ changePerson(ChangePersonRef ref) {
         postalCode: '76229',
         city: 'Karlsruhe',
         state: 'Deutschland',
-        tics: 0);
+        count: 0);
   }
   ref.invalidate(onePersonProvider);
   first = !first;
 }
 
-void copyTicsToPerson(WidgetRef ref) {
-  print('copyWithToPerson');
+void copyCountToPerson(WidgetRef ref) {
   int value = ref.read(countProvider);
-  print('counter value $value');
-  person = person.copyWith(tics: value);
-  print('person : $person');
+  person = person.copyWith(count: value);
   ref.refresh(onePersonProvider);
-  //ref.invalidate(onePersonProvider);
 }

@@ -34,7 +34,7 @@ final onePersonProvider = AutoDisposeProvider<Person>.internal(
 );
 
 typedef OnePersonRef = AutoDisposeProviderRef<Person>;
-String _$changePersonHash() => r'09d8d8ba1cf90ee18c31d0d309dffa0b709d99fb';
+String _$changePersonHash() => r'0409d5e601aa76c134470a2087c97c7adee1bcdd';
 
 /// See also [changePerson].
 @ProviderFor(changePerson)

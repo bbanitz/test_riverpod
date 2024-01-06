@@ -9,7 +9,6 @@ Timer? timer;
 
 @riverpod
 int count(CountRef ref) {
-  print('count:$_count');
   return _count;
 }
 
