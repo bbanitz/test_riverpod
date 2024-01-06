@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'providers/provider1.dart';
-import 'model/person.dart';
 import 'providers/provider2.dart';
 import 'widgets/test_widget.dart';
 // We create a "provider", which will store a value (here "Hello world").
@@ -96,6 +95,13 @@ class MyApp extends ConsumerWidget {
                   },
                   child: const Text('change person',
                       style: TextStyle(fontSize: 30))),
+              const SizedBox(height: 30),
+              ElevatedButton(
+                  onPressed: () {
+                    copyTicsToPerson(ref);
+                  },
+                  child:
+                      const Text('copy tics', style: TextStyle(fontSize: 30))),
               //const JsonWidget(),
               const TestWidget2()
             ],
