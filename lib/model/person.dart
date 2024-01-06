@@ -1,14 +1,12 @@
 // ignore_for_file: invalid_annotation_target
 
-import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'person.freezed.dart';
 part 'person.g.dart';
 
+/*
 bool first = true;
 Person person = Person(
     id: 1,
@@ -46,7 +44,7 @@ changePerson(ChangePersonRef ref) {
   ref.invalidate(onePersonProvider);
   first = !first;
 }
-
+*/
 @freezed
 class Person with _$Person {
   @JsonSerializable(fieldRename: FieldRename.snake)
@@ -56,6 +54,7 @@ class Person with _$Person {
       required String adress,
       String? postalCode,
       String? city,
+      String? state,
       required List<String> liste}) = _Person;
 
   factory Person.fromJson(Map<String, Object?> json) => _$PersonFromJson(json);

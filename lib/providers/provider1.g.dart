@@ -6,7 +6,7 @@ part of 'provider1.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$countHash() => r'16da0f4035b44a7022a91505c0d97e68c6a1b1e2';
+String _$countHash() => r'667ac41656ed6c4853d1fa6eea1ffb03f407dcee';
 
 /// See also [count].
 @ProviderFor(count)
@@ -48,7 +48,7 @@ final test2Provider = AutoDisposeProvider<String>.internal(
 );
 
 typedef Test2Ref = AutoDisposeProviderRef<String>;
-String _$counterActionHash() => r'e57c84b719cb17b5a1a8b7fceda06e4c52cf30a6';
+String _$counterActionHash() => r'ea30e30e2d311db2349580261725c70f0c8ff597';
 
 /// See also [CounterAction].
 @ProviderFor(CounterAction)

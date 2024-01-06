@@ -6,7 +6,7 @@ part of 'provider2.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$dureeStrHash() => r'c9edc11b10e035eac1258a75e6dc775521cbff20';
+String _$dureeStrHash() => r'58c0bc2fb09610d23e3b98b57c1c0c3c55cea93a';
 
 /// See also [dureeStr].
 @ProviderFor(dureeStr)
@@ -20,5 +20,33 @@ final dureeStrProvider = AutoDisposeProvider<String>.internal(
 );
 
 typedef DureeStrRef = AutoDisposeProviderRef<String>;
+String _$onePersonHash() => r'c96e283cad2eec746e7ac78fd57319f724fa396d';
+
+/// See also [onePerson].
+@ProviderFor(onePerson)
+final onePersonProvider = AutoDisposeProvider<Person>.internal(
+  onePerson,
+  name: r'onePersonProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$onePersonHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef OnePersonRef = AutoDisposeProviderRef<Person>;
+String _$changePersonHash() => r'2931129cd3e8965771566467f323038fb0b7ab5a';
+
+/// See also [changePerson].
+@ProviderFor(changePerson)
+final changePersonProvider = AutoDisposeProvider<Object?>.internal(
+  changePerson,
+  name: r'changePersonProvider',
+  debugGetCreateSourceHash:
+      const bool.fromEnvironment('dart.vm.product') ? null : _$changePersonHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef ChangePersonRef = AutoDisposeProviderRef<Object?>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

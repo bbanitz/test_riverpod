@@ -25,6 +25,7 @@ mixin _$Person {
   String get adress => throw _privateConstructorUsedError;
   String? get postalCode => throw _privateConstructorUsedError;
   String? get city => throw _privateConstructorUsedError;
+  String? get state => throw _privateConstructorUsedError;
   List<String> get liste => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -43,6 +44,7 @@ abstract class $PersonCopyWith<$Res> {
       String adress,
       String? postalCode,
       String? city,
+      String? state,
       List<String> liste});
 }
 
@@ -64,6 +66,7 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
     Object? adress = null,
     Object? postalCode = freezed,
     Object? city = freezed,
+    Object? state = freezed,
     Object? liste = null,
   }) {
     return _then(_value.copyWith(
@@ -87,6 +90,10 @@ class _$PersonCopyWithImpl<$Res, $Val extends Person>
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
               as String?,
+      state: freezed == state
+          ? _value.state
+          : state // ignore: cast_nullable_to_non_nullable
+              as String?,
       liste: null == liste
           ? _value.liste
           : liste // ignore: cast_nullable_to_non_nullable
@@ -108,6 +115,7 @@ abstract class _$$PersonImplCopyWith<$Res> implements $PersonCopyWith<$Res> {
       String adress,
       String? postalCode,
       String? city,
+      String? state,
       List<String> liste});
 }
 
@@ -127,6 +135,7 @@ class __$$PersonImplCopyWithImpl<$Res>
     Object? adress = null,
     Object? postalCode = freezed,
     Object? city = freezed,
+    Object? state = freezed,
     Object? liste = null,
   }) {
     return _then(_$PersonImpl(
@@ -150,6 +159,10 @@ class __$$PersonImplCopyWithImpl<$Res>
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
               as String?,
+      state: freezed == state
+          ? _value.state
+          : state // ignore: cast_nullable_to_non_nullable
+              as String?,
       liste: null == liste
           ? _value._liste
           : liste // ignore: cast_nullable_to_non_nullable
@@ -168,6 +181,7 @@ class _$PersonImpl implements _Person {
       required this.adress,
       this.postalCode,
       this.city,
+      this.state,
       required final List<String> liste})
       : _liste = liste;
 
@@ -184,6 +198,8 @@ class _$PersonImpl implements _Person {
   final String? postalCode;
   @override
   final String? city;
+  @override
+  final String? state;
   final List<String> _liste;
   @override
   List<String> get liste {
@@ -194,7 +210,7 @@ class _$PersonImpl implements _Person {
 
   @override
   String toString() {
-    return 'Person(id: $id, name: $name, adress: $adress, postalCode: $postalCode, city: $city, liste: $liste)';
+    return 'Person(id: $id, name: $name, adress: $adress, postalCode: $postalCode, city: $city, state: $state, liste: $liste)';
   }
 
   @override
@@ -208,13 +224,14 @@ class _$PersonImpl implements _Person {
             (identical(other.postalCode, postalCode) ||
                 other.postalCode == postalCode) &&
             (identical(other.city, city) || other.city == city) &&
+            (identical(other.state, state) || other.state == state) &&
             const DeepCollectionEquality().equals(other._liste, _liste));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, name, adress, postalCode,
-      city, const DeepCollectionEquality().hash(_liste));
+      city, state, const DeepCollectionEquality().hash(_liste));
 
   @JsonKey(ignore: true)
   @override
@@ -237,6 +254,7 @@ abstract class _Person implements Person {
       required final String adress,
       final String? postalCode,
       final String? city,
+      final String? state,
       required final List<String> liste}) = _$PersonImpl;
 
   factory _Person.fromJson(Map<String, dynamic> json) = _$PersonImpl.fromJson;
@@ -251,6 +269,8 @@ abstract class _Person implements Person {
   String? get postalCode;
   @override
   String? get city;
+  @override
+  String? get state;
   @override
   List<String> get liste;
   @override

@@ -22,9 +22,8 @@ String isRunning(IsRunningRef ref) {
 class CounterAction extends _$CounterAction {
   @override
   int build() {
-    timer = Timer.periodic(const Duration(seconds: 1), (Timer t) {
-      _count++;
-      ref.invalidate(countProvider);
+    ref.onDispose(() {
+      timer?.cancel();
     });
     return 0;
   }
@@ -35,14 +34,13 @@ class CounterAction extends _$CounterAction {
   }
 
   void stop() {
-    print('stop');
     timer?.cancel();
     timer = null;
     ref.invalidate(isRunningProvider);
   }
 
   void start() {
-    print('start counter');
+    timer?.cancel();
     timer = Timer.periodic(const Duration(seconds: 1), (Timer t) {
       _count++;
       ref.invalidate(countProvider);

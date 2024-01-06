@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:test_riverpod/model/person.dart';
+import '../providers/provider2.dart';
 
 class TestWidget2 extends ConsumerWidget {
   const TestWidget2({super.key});
