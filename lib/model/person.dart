@@ -1,7 +1,6 @@
 // ignore_for_file: invalid_annotation_target
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'person.freezed.dart';
 part 'person.g.dart';
@@ -55,6 +54,7 @@ class Person with _$Person {
       String? postalCode,
       String? city,
       String? state,
+      required int tics,
       required List<String> liste}) = _Person;
 
   factory Person.fromJson(Map<String, Object?> json) => _$PersonFromJson(json);
